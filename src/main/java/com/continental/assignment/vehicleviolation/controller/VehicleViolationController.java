@@ -21,8 +21,8 @@ public class VehicleViolationController {
         return new ResponseEntity<VehicleViolation>(vehicleViolation, HttpStatus.CREATED);
     }
 
-    @GetMapping("/violatedVehicles")
-    public ResponseEntity<List<VehicleViolation>> getViolatedVehicles(List<String> vehicles){
+    @PostMapping ("/violatedVehicles")
+    public ResponseEntity<List<VehicleViolation>> getViolatedVehicles(@RequestBody List<String> vehicles){
         return new ResponseEntity<List<VehicleViolation>>(service.getViolatedVehicles(vehicles), HttpStatus.OK);
     }
 }

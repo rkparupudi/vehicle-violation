@@ -1,13 +1,10 @@
 package com.continental.assignment.vehicleviolation.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="vehicleviolation")
+@Table(name="VehicleViolation")
 public class VehicleViolation {
 
     @Id

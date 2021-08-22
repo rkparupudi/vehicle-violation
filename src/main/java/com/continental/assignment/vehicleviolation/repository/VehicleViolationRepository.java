@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface VehicleViolationRepository extends JpaRepository<VehicleViolation, String> {
 
-    @Query( "select v from VehicleViolation v where vehicleId in :vehicleId" )
-    List<VehicleViolation> getViolatedVehicles(@Param("vehicleId") List<String> vehicles);
+    @Query( "select v from VehicleViolation v where v.vehicleId in (:vehicleId)" )
+    List<VehicleViolation> getViolatedVehicles(@Param("vehicleId") List<String> vehicleId);
 }
